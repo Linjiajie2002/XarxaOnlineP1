@@ -24,7 +24,12 @@ public class BubbleSort : MonoBehaviour
         logArray();
         spawnObjs();
 
-        // TO DO 5: Crear y lanzar un hilo para el BubbleSort
+        //TO DO 4 
+        //Call the three previous functions in order to set up the exercise 
+
+
+        //TO DO 5 
+        //Create a new thread using the function "bubbleSort" and start it.
         sortingThread = new Thread(bubbleSort);
         sortingThread.Start();
     }
@@ -60,7 +65,7 @@ public class BubbleSort : MonoBehaviour
                 {
                     (array[j], array[j + 1]) = (array[j + 1], array[j]);
                     swapped = true;
-                    arrayChanged = true; // Marcamos que hubo un cambio
+                    arrayChanged = true; 
                 }
             }
             if (!swapped)
@@ -126,7 +131,7 @@ public class BubbleSort : MonoBehaviour
     {
         if (sortingThread != null && sortingThread.IsAlive)
         {
-            sortingThread.Abort(); // Aseguramos que el hilo termine al cerrar la aplicación
+            sortingThread.Abort(); 
         }
     }
 }
